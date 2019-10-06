@@ -1,0 +1,14 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: app-a
+  namespace: team1
+spec:
+  releaseName: app-a
+  chart:
+    repository: https://raw.githubusercontent.com/oschira/flux-experiment-helm-repo/master/
+    version: 1.0
+    name: app-a
+  values:
+    replicaCount: 1
